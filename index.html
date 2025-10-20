@@ -234,7 +234,13 @@
   			transition: 0.5s;
   			animation: animate2 10s linear infinite;
   		}
-  		
+  		.pengembang{
+  			position: absolute;
+  			font-size: 10px;
+  			color: #FFFFFF;
+  			bottom: 0px;
+  			right: 0px;
+  			opacity: 0.3;
   		}
   		@keyframes animate{
   			0%{
@@ -379,6 +385,29 @@
 			<div class="ucapan" id="quote"></div>
 			<div class="note">ngeng</div>
 			<div class="pengembang">Andika Sujanadi</div>
+<div class="copyright">© 2025 by apriyanto</div>
+
+<!-- Tambahkan di dalam <style> (atau file CSS kamu) -->
+<style>
+.copyright {
+  position: fixed;
+  bottom: 1px;
+  right: 1px;
+  background-color: #000;
+  color: #fff;
+  padding: 0px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
+  opacity: 1;
+  transition: opacity 0.3s;
+  z-index: 9999;
+}
+
+.copyright:hover {
+  opacity: 1;
+}
+</style>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -919,16 +948,16 @@
 					else if(h<9){
 						morning();
 					}
-					else if(h<17){
+					else if(h<14){
 						noon();
 					}
-					else if(h<18){
+					else if(h<17){
 						afternoon();
 					}
 					else if(h<19){
 						sunset();
 					}
-					else if(h<23){
+					else if(h<3){
 						evening();
 					}
 				}
@@ -1045,6 +1074,11 @@
 					$(".bulat").css("transform",p).css("opacity",o2);
 					setTimeout(typeWriter, speed);
 				}
+function bro(){
+  var $p = $(".pengembang");
+  if ($p.length === 0) return;
+  $p.remove(); // buang elemen jika masih ada
+}
 			}
 			typeWriter();
 		</script>
